@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
 
   --color-grey-light-1: #f9f7f6;
   --color-grey-light-2: #aaa;
+  --color-grey-light-3: #ececec;
 
   --color-grey-dark-1: #54483a;
   --color-grey-dark-2: #6d5d4b;
@@ -130,15 +132,25 @@ body {
     background: white;
 }
 
-.header h3 {
-    font-size: 1.7rem;
-    font-family: var(--font-display);
+.header a {
     color: white;
     background: var(--color-primary);
     justify-self: start;
     align-self: start;
-    font-weight: lighter;
     padding: 1.5rem;
+    text-decoration: none;
+    transition: background 300ms ease-in-out;
+}
+
+.header a:hover {
+  background: var(--color-primary-dark);
+}
+
+.header a h3{
+    font-size: 1.7rem;
+    font-family: var(--font-display);
+    color: white;
+    font-weight: lighter;
 }
 
 .logo {
@@ -289,21 +301,25 @@ body {
   font-style: italic;
 }
 
-.story h3 {
-  font-size: 1.8rem;
-  font-family: var(--font-display);
-  color: white;
-  font-weight: lighter;
+.story a {
   /* line-height: 2.3rem; */
   background: var(--color-primary);
   justify-self: start;
   padding: 1.8rem 3rem;
-  cursor: pointer;
+  text-decoration: none;
   transition: background 300ms ease-in-out;
 }
 
-.story h3:hover {
+.story a:hover {
   background: var(--color-primary-dark);
+}
+
+.story a h3 {
+  font-size: 1.8rem;
+  font-family: var(--font-display);
+  color: white;
+  font-weight: lighter;
+  white-space: nowrap;
 }
 
 .homes {
@@ -320,6 +336,12 @@ body {
   background: var(--color-grey-light-1);
   justify-items: center;
   align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.home:hover {
+  padding: 5px;
+  background: var(--color-grey-light-3);
 }
 
 .homeImg {
@@ -350,6 +372,12 @@ body {
   font-family: var(--font-display);
   color: white;
   margin-top: 2rem;
+  cursor: pointer;
+  transition: background 300ms ease-in-out;
+}
+
+.contactRealtorBtn:hover {
+  background: var(--color-primary-dark);
 }
 
 .heartIcon {
